@@ -4,10 +4,11 @@
 
     <form action="">
       <label for="pensamento">Pensamentos</label>
-      <input type="textarea" placeholder="Digite o pensamento" id="pensamento" name="pensamento" class="input">
+      <input [value]="pensamento.conteudo" type="textarea" placeholder="Digite o pensamento" id="pensamento"
+        name="pensamento" class="input">
 
       <label for="autoria">Autoria ou Fonte</label>
-      <input type="text" name="autoria" id="autoria" class="input
+      <input [value]="pensamento.autoria" type="text" name="autoria" id="autoria" class="input
       " placeholder="Digite a Autoria ou Fonte">
 
       <label for="modelo"> Selecione o modelo do card: </label>
@@ -23,8 +24,8 @@
           Prévia:
           <div class=" modelo modelo1 ff-roboto-mono ">
             <img src="../../../assets/imagens/modelo1.png" alt="Aspas Azuis">
-            <p class="conteudo">Aqui vai o conteudo</p>
-            <p class="autoria">Aqui vai a autoria</p>
+            <p class="conteudo">{{ pensamento.conteudo }}</p>
+            <p class="autoria"> <b>{{ pensamento.autoria }} </b> </p>
           </div>
         </div>
 
@@ -40,8 +41,8 @@
           Prévia:
           <div class=" modelo modelo2 ff-roboto-mono ">
             <img src="../../../assets/imagens/modelo2.png" alt="Aspas Azuis claro">
-            <p class="conteudo">Aqui vai o conteudo</p>
-            <p class="autoria">Aqui vai a autoria</p>
+            <p class="conteudo">{{ pensamento.conteudo }}</p>
+            <p class="autoria"><b>{{ pensamento.autoria }}</b></p>
           </div>
         </div>
 
@@ -57,8 +58,8 @@
           Prévia:
           <div class=" modelo modelo3 ff-roboto-mono ">
             <img src="../../../assets/imagens/modelo3.png" alt="Aspas Verdes">
-            <p class="conteudo">Aqui vai o conteudo</p>
-            <p class="autoria">Aqui vai a autoria</p>
+            <p class="conteudo">{{ pensamento.conteudo }}</p>
+            <p class="autoria"><b> {{ pensamento.autoria }}</b></p>
           </div>
         </div>
 
